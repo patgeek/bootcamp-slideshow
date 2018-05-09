@@ -2,12 +2,19 @@ import * as React from 'react';
 import Title from './Title';
 import Simple from './Simple';
 import {Slide} from '../types/index';
+import '../styles/Content.css';
 
 
 class Content extends React.Component<Slide> {
     public render() {
-        const type = this.props.type;
-        switch(type) {
+        return (
+            <div className="contentBorder">
+                { this.buildSlide(this.props) }
+            </div>
+        )
+    }
+    private buildSlide(slide: Slide) {
+        switch(slide.type) {
             case "TITLE":
                 return (
                     <Title mainTitle={this.props.mainTitle}
@@ -26,7 +33,6 @@ class Content extends React.Component<Slide> {
                         subTitle={this.props.subTitle}
                     />
                 );
-
         }
     }
 }
