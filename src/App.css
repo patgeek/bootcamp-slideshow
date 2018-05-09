@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+}
+
+.slide {
+  width: 800px;
+  height: 600px;
+  background: white;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+}
+
+.overview {
+  width: 300px;
+  height: 600px;
+  background: white;
+  border: 1px solid black;
+  float: left;
+}
