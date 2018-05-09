@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Content from './Content'
 import {Slide} from '../types/index';
-import '../App.css';
+import '../styles/App.css';
 
 
 class App extends React.Component<Slide> {
