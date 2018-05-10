@@ -1,5 +1,6 @@
 import * as React from 'react';
-// import '../styles/Content.css';
+import slides from './SlideFixtures';
+import '../styles/SlideList.css';
 
 
 class SlideList extends React.Component {
@@ -9,6 +10,14 @@ class SlideList extends React.Component {
                 Slide List
             </div>
         )
+    }
+
+    private makeList() {
+        let list = [];
+        for (let s of slides) {
+            list.push(s.mainTitle);
+        }
+        return list;
     }
 }
 

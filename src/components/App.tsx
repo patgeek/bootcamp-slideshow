@@ -8,13 +8,9 @@ import '../styles/App.css';
 class App extends React.Component<Slide> {
   public render() {
     return (
-      <div>
-        <div className="slideListBorder">
-          { this.buildSlideList() }
-        </div>
-        <div className="appBorder">
-          { this.buildContent() }
-        </div>
+      <div className="appBorder">
+        { this.buildSlideList() }
+        { this.buildContent() }
       </div>
     )
   }
