@@ -7,7 +7,7 @@ import '../styles/App.css';
 class App extends React.Component<Slide> {
   public render() {
     return (
-      <div className="contentBorder">
+      <div className="appBorder">
           { this.buildContent() }
       </div>
     )
