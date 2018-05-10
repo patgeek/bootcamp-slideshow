@@ -18,6 +18,15 @@ s2 = {
     type: "SIMPLE",
 }
 
-const slides = [s1, s2];
+let s3: Slide;
+s3 = {
+    id: 2,
+    mainTitle: "More Thoughts",
+    subTitle: "",
+    body: "Where do I take this project next?\nI think I need to implement redux.\nTime to read docs.",
+    type: "SIMPLE",
+}
+
+const slides = [s1, s2, s3];
 
 export default slides;
