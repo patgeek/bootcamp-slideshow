@@ -7,3 +7,14 @@
     margin: auto;
     padding: 5px;
 }
+
+.slideListContent {
+    align-self: left;
+}
+
+.slideButton {
+    border: 1px solid purple;
+    color: purple;
+    height: 40px;
+    width: 160px;
+}

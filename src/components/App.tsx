@@ -24,6 +24,7 @@ class App extends React.Component<Slide> {
   private buildContent() {
     return (
       <Content 
+        id={this.props.id}
         mainTitle={this.props.mainTitle}
         subTitle={this.props.subTitle}
         body={this.props.body}

@@ -1,20 +1,13 @@
 import * as React from 'react';
 import App from '../components/App';
 import *  as renderer from 'react-test-renderer';
-import {Slide} from '../types/index';
+import {testTitleSlide as ts} from './TestFixtures';
 
-
-let ts: Slide;
-ts = {
-  mainTitle: "Star Wars",
-  subTitle: "Episode I",
-  body: "Not a good movie.",
-  type: "TITLE",
-}
 
 test('It displays the main title.', () => {
   const component = renderer.create(
-      <App mainTitle={ts.mainTitle}
+      <App id={ts.id}
+        mainTitle={ts.mainTitle}
         subTitle={ts.subTitle}
         body={ts.body}
         type={ts.type}

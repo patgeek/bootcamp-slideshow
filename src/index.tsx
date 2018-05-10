@@ -8,6 +8,7 @@ import {Slide} from './types/index';
 
 let ts: Slide;
 ts = {
+  id: 0,
   mainTitle: "Main Title",
   subTitle: "Sub Title",
   body: "This is the body of the slide.",
@@ -15,7 +16,8 @@ ts = {
 }
 
 ReactDOM.render(
-  <App mainTitle={ts.mainTitle}
+  <App id={ts.id}
+    mainTitle={ts.mainTitle}
     subTitle={ts.subTitle}
     body={ts.body}
     type={ts.type}
