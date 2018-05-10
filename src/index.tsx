@@ -8,9 +8,9 @@ import {Slide} from './types/index';
 
 let ts: Slide;
 ts = {
-  mainTitle: "Star Wars",
-  subTitle: "Episode I",
-  body: "Not a good movie.",
+  mainTitle: "Main Title",
+  subTitle: "Sub Title",
+  body: "This is the body of the slide.",
   type: "TITLE",
 }
 

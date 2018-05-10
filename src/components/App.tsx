@@ -6,13 +6,20 @@ import '../styles/App.css';
 
 class App extends React.Component<Slide> {
   public render() {
-    const {mainTitle, subTitle, body, type} = this.props;
+    return (
+      <div className="contentBorder">
+          { this.buildContent() }
+      </div>
+    )
+  }
+
+  private buildContent() {
     return (
       <Content 
-        mainTitle={mainTitle}
-        subTitle={subTitle}
-        body={body}
-        type={type}
+        mainTitle={this.props.mainTitle}
+        subTitle={this.props.subTitle}
+        body={this.props.body}
+        type={this.props.type}
       />
     )
   }
