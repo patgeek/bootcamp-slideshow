@@ -6,3 +6,12 @@
     margin: auto;
     padding: 5px;
 }
+
+.navBorder {
+    height: 85px;
+    width: 800px;
+    border: 1px solid orange;
+    float: left;
+    margin: auto;
+    padding: 5px;
+}

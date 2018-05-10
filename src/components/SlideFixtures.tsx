@@ -1,7 +1,6 @@
 import {Slide} from '../types/index';
 
-let s1: Slide;
-s1 = {
+const s1: Slide = {
     id: 0,
     mainTitle: "Star Wars",
     subTitle: "Episode I",
@@ -9,8 +8,7 @@ s1 = {
     type: "TITLE",
 }
 
-let s2: Slide;
-s2 = {
+const s2: Slide = {
     id: 1,
     mainTitle: "Thoughts",
     subTitle: "",
@@ -18,8 +16,7 @@ s2 = {
     type: "SIMPLE",
 }
 
-let s3: Slide;
-s3 = {
+const s3: Slide = {
     id: 2,
     mainTitle: "More Thoughts",
     subTitle: "",

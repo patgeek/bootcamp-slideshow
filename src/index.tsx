@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import slides from './components/SlideFixtures';
 
 
-const ts = slides[1];
+const ts = slides[0];
 
 ReactDOM.render(
   <App {...ts}/>,
