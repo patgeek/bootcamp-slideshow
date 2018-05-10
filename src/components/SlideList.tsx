@@ -28,7 +28,7 @@ class SlideList extends React.Component {
 
 function SlideButton(slide: Slide) {
     return (
-        <li><button className="slideButton">
+        <li key={slide.id}><button className="slideButton">
             {slide.mainTitle}
         </button></li>
     )

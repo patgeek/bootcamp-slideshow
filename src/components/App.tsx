@@ -23,13 +23,7 @@ class App extends React.Component<Slide> {
 
   private buildContent() {
     return (
-      <Content 
-        id={this.props.id}
-        mainTitle={this.props.mainTitle}
-        subTitle={this.props.subTitle}
-        body={this.props.body}
-        type={this.props.type}
-      />
+      <Content {...this.props}/>
     )
   }
 }

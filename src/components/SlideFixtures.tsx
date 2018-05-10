@@ -14,7 +14,7 @@ s2 = {
     id: 1,
     mainTitle: "Thoughts",
     subTitle: "",
-    body: "The acting is not very good./nI liked it as a kid.",
+    body: "The acting is not very good.\nI liked it as a kid.",
     type: "SIMPLE",
 }
 

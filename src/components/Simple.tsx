@@ -11,7 +11,7 @@ class Simple extends React.Component<Props> {
         return (
             <div>
                 <h1 className="mainTitle">{this.props.mainTitle}</h1>
-                <p className="body">{this.props.body}</p>
+                <pre className="body">{this.props.body}</pre>
             </div>
         );
     }
