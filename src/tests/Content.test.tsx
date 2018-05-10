@@ -18,7 +18,6 @@ test('It can render a Title slide.', () => {
         <Content {...testTitleSlide}/>
     );
     const testInstance = component.root;
-    console.log(component.toJSON().children)
     expect(testInstance.findByType(Title));
 });
 

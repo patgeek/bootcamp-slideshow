@@ -20,13 +20,13 @@ class SlideList extends React.Component {
     private makeList() {
         const list = [];
         for (const s of slides) {
-            list.push(SlideButton(s));
+            list.push(slideButton(s));
         }
         return list;
     }
 }
 
-function SlideButton(slide: Slide) {
+function slideButton(slide: Slide) {
     return (
         <li key={slide.id}><button className="slideButton">
             {slide.mainTitle}
