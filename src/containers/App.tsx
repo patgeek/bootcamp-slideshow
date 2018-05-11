@@ -1,15 +1,16 @@
-import App from '../components/App';
+import App, {Props} from '../components/App';
 import * as actions from '../actions/';
-import { StoreState, Slide } from '../types/index';
+import { StoreState } from '../types/index';
 import { connect, Dispatch } from 'react-redux';
-import slides from '../components/SlideFixtures';
+// import slides from '../components/SlideFixtures';
 
 // type StateProps = Pick<Slide, 'id' | 'mainTitle' | 'subTitle' | 'body' | 'type'>;
-type DispatchProps = Pick<Slide, 'onChange' | 'onNext' | 'onPrevious'>;
+type DispatchProps = Pick<Props, 'onChange' | 'onNext' | 'onPrevious'>;
 
-export function mapStateToProps({ currentSlide }: StoreState) {
+export function mapStateToProps({ currentSlide, slides }: StoreState) {
     return {
-        id: slides[0].id,
+        slideId: slides[currentSlide].id,
+        slides,
     }
 }
 
