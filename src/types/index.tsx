@@ -3,11 +3,16 @@ export interface Slide {
     mainTitle: string;
     subTitle: string;
     body: string;
-    type: string;
-    // onChange?: (id: number) => void;
-    // onNext?: () => void;
-    // onPrevious?: () => void;
+    type: "TITLE" | "SIMPLE";
 }
+
+export interface TwoColSlide extends Slide {
+    leftcol: string;
+    rightcol: string;
+    type: "TWOCOL"
+}
+
+type GenericSlide = Slide | TwoColSlide;
 
 export interface StoreState {
     currentSlide: number; // will refer to id in the Slide interface

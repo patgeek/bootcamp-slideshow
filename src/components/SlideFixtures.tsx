@@ -1,6 +1,6 @@
-import {Slide} from '../types/index';
+import {Slide, TwoColSlide} from '../types/index';
 
-const s1: Slide = {
+const s0: Slide = {
     id: 0,
     mainTitle: "Star Wars",
     subTitle: "Episode I",
@@ -8,7 +8,7 @@ const s1: Slide = {
     type: "TITLE",
 }
 
-const s2: Slide = {
+const s1: Slide = {
     id: 1,
     mainTitle: "Thoughts",
     subTitle: "",
@@ -16,7 +16,7 @@ const s2: Slide = {
     type: "SIMPLE",
 }
 
-const s3: Slide = {
+const s2: Slide = {
     id: 2,
     mainTitle: "More Thoughts",
     subTitle: "",
@@ -24,6 +24,16 @@ const s3: Slide = {
     type: "SIMPLE",
 }
 
-const slides = [s1, s2, s3];
+const s3: TwoColSlide = {
+    id: 3,
+    mainTitle: "Two Columns",
+    subTitle: "",
+    body: "",
+    type: "TWOCOL",
+    leftcol: "Here's the text in the left.",
+    rightcol: "And here's the text in the right.",
+}
+
+const slides = [s0, s1, s2, s3];
 
 export default slides;

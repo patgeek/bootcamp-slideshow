@@ -1,15 +1,16 @@
 import * as React from 'react';
 import Title from './Title';
 import Simple from './Simple';
+// import TwoCol from './TwoCol';
 import {Slide} from '../types/index';
 import '../styles/Content.css';
 
 
 export interface Props {
     slide: Slide;
-    onChange?: (id: number) => void;
-    onNext?: () => void;
-    onPrevious?: () => void;
+    onChange: (id: number) => void;
+    onNext: () => void;
+    onPrevious: () => void;
 }
 
 class Content extends React.Component<Props> {
@@ -40,6 +41,14 @@ class Content extends React.Component<Props> {
                         body={this.props.slide.body}
                     />
                 );
+
+            // case "TWOCOL":
+            //     return (
+            //         <TwoCol mainTitle={this.props.slide.mainTitle}
+            //             leftcol={this.props.slide.leftcol}
+            //             rightcol={this.props.slide.rightcol}
+            //         />
+            //     );
             default:
                 return (
                     <Title mainTitle={this.props.slide.mainTitle}
