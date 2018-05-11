@@ -28,3 +28,11 @@ test('It can render a Simple slide.', () => {
     const testInstance = component.root;
     expect(testInstance.findByType(Simple));
 });
+
+test('onPrevious is called when button is clicked.', () => {
+
+});
+
+test('onNext is called when button is clicked.', () => {
+
+});

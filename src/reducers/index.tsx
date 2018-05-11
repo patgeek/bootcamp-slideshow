@@ -9,6 +9,6 @@ export function slide(state: StoreState, action: SlideAction): StoreState {
         case NEXT_SLIDE:
             return {...state, currentSlide: state.currentSlide + 1};
         case PREVIOUS_SLIDE:
-            return {...state, currentSlide: state.currentSlide - 1};
+            return {...state, currentSlide: Math.max(1, state.currentSlide - 1)};
     }
 }

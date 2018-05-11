@@ -8,13 +8,13 @@ import '../styles/Content.css';
 class Content extends React.Component<Slide> {
     public render() {
         return (
-            <div>
-                <div className="contentBorder">
+            <div className="contentBorder">
+                <div className="slideBorder">
                     { this.buildSlide(this.props) }
                 </div>
                 <div className="navBorder">
-                    <button >Previous Slide</button>
-                    <button >Next Slide</button>
+                    <button onClick={this.props.onPrevious}>Previous Slide</button>
+                    <button onClick={this.props.onNext}>Next Slide</button>
                 </div>
             </div>
         )
