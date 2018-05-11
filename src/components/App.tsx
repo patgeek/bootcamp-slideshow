@@ -5,25 +5,17 @@ import {Slide} from '../types/index';
 import '../styles/App.css';
 
 
-class App extends React.Component<Slide> {
+export interface Props {
+  slides: Slide[];
+}
+
+class App extends React.Component<Props, {}> {
   public render() {
     return (
       <div className="appBorder">
-        { this.buildSlideList() }
-        { this.buildContent() }
+        <SlideList slides={this.props.slides}/>
+        <Content {...this.props.slides[0]}/>
       </div>
-    )
-  }
-
-  private buildSlideList() {
-    return (
-      <SlideList/>
-    )
-  }
-
-  private buildContent() {
-    return (
-      <Content {...this.props}/>
     )
   }
 }

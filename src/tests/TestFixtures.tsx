@@ -18,6 +18,8 @@ simple = {
     type: "SIMPLE",
 }
 
+const ts = [title, simple];
 
+export default ts;
 export {title as testTitleSlide};
 export {simple as testSimpleSlide};

@@ -3,6 +3,7 @@ import * as constants from '../constants';
 
 export interface ChangeSlide {
     type: constants.CHANGE_SLIDE;
+    id: number;
 }
 
 export interface NextSlide {
@@ -17,7 +18,8 @@ export type SlideAction = ChangeSlide | NextSlide | PreviousSlide;
 
 export function changeSlide(id: number): ChangeSlide {
     return {
-        type: constants.CHANGE_SLIDE
+        type: constants.CHANGE_SLIDE,
+        id,
     }
 }
 
