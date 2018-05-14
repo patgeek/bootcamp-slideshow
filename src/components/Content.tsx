@@ -11,10 +11,12 @@ export interface Props {
     onChange: (id: number) => void;
     onNext: () => void;
     onPrevious: () => void;
+    onVisited: () => void;
 }
 
 class Content extends React.Component<Props> {
     public render() {
+        this.props.onVisited();
         return (
             <div className="contentBorder">
                 <div className="slideBorder">
@@ -25,7 +27,7 @@ class Content extends React.Component<Props> {
                     <button onClick={this.props.onNext}>Next Slide</button>
                 </div>
             </div>
-        )
+        );
     }
     private buildSlide(slide: GenericSlide) {
         switch(slide.type) {

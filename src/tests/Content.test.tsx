@@ -8,14 +8,14 @@ import {testTitleSlide, testSimpleSlide} from './TestFixtures';
 
 test('It can be rendered.', () => {
     const component = renderer.create(
-        <Content slide={testTitleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <Content slide={testTitleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>
     );
     expect(component.toJSON().children.length).toBeGreaterThan(0);
 });
 
 test('It can render a Title slide.', () => {
     const component = renderer.create(
-        <Content slide={testTitleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <Content slide={testTitleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>
     );
     const testInstance = component.root;
     expect(testInstance.findByType(Title));
@@ -23,7 +23,7 @@ test('It can render a Title slide.', () => {
 
 test('It can render a Simple slide.', () => {
     const component = renderer.create(
-        <Content slide={testSimpleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <Content slide={testSimpleSlide} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>
     );
     const testInstance = component.root;
     expect(testInstance.findByType(Simple));

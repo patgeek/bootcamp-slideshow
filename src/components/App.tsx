@@ -8,9 +8,11 @@ import '../styles/App.css';
 export interface Props {
   slides: GenericSlide[];
   slideId: number;
+  visited: number[];
   onChange: (id: number) => void;
   onNext: () => void;
   onPrevious: () => void;
+  onVisited: () => void;
 }
 
 class App extends React.Component<Props, {}> {
@@ -18,13 +20,13 @@ class App extends React.Component<Props, {}> {
     return (
       <div className="appBorder">
         <SlideList slides={this.props.slides} 
-          onChange={this.props.onChange}
-          onNext={this.props.onNext}
-          onPrevious={this.props.onPrevious}/>
+          visited={this.props.visited}
+          onChange={this.props.onChange}/>
         <Content slide={this.props.slides[this.props.slideId]} 
           onChange={this.props.onChange} 
           onNext={this.props.onNext}
-          onPrevious={this.props.onPrevious}/>
+          onPrevious={this.props.onPrevious}
+          onVisited={this.props.onVisited}/>
       </div>
     )
   }

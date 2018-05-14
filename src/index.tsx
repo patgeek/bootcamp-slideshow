@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 const store = createStore(slide, {
   currentSlide: 0,
   slides,
+  visited: [0],
 });
 
 ReactDOM.render(

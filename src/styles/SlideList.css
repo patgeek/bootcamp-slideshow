@@ -18,3 +18,10 @@
     height: 40px;
     width: 160px;
 }
+
+.slideButtonVisited {
+    border: 1px solid green;
+    color: green;
+    height: 40px;
+    width: 160px;
+}

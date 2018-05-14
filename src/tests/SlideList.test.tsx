@@ -6,21 +6,21 @@ import ts from './TestFixtures';
 
 test('It can be rendered.', () => {
     const component = renderer.create(
-        <SlideList slides={ts} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
     );
     expect(component.toJSON().children.length).toBeGreaterThan(0);
 });
 
 test('Button list is rendered.', () => {
     const component = renderer.create(
-        <SlideList slides={ts} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
     );
     expect(component.toJSON().children[1].type).toBe("ul");
 });
 
 test('Individual buttons are rendered.', () => {
     const component = renderer.create(
-        <SlideList slides={ts} onChange={() => {}} onNext={() => {}} onPrevious={() => {}}/>
+        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
     );
     expect(component.toJSON().children[1].children.length).toBeGreaterThan(0)
 });
