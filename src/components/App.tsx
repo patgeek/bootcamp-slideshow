@@ -23,6 +23,7 @@ class App extends React.Component<Props, {}> {
           visited={this.props.visited}
           onChange={this.props.onChange}/>
         <Content slide={this.props.slides[this.props.slideId]} 
+          numSlides={this.props.slides.length}
           onChange={this.props.onChange} 
           onNext={this.props.onNext}
           onPrevious={this.props.onPrevious}

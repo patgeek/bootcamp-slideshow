@@ -8,6 +8,7 @@ import '../styles/Content.css';
 
 export interface Props {
     slide: GenericSlide;
+    numSlides: number;
     onChange: (id: number) => void;
     onNext: () => void;
     onPrevious: () => void;
@@ -22,10 +23,7 @@ class Content extends React.Component<Props> {
                 <div className="slideBorder">
                     { this.buildSlide(this.props.slide) }
                 </div>
-                <div className="navBorder">
-                    <button onClick={this.props.onPrevious}>Previous Slide</button>
-                    <button onClick={this.props.onNext}>Next Slide</button>
-                </div>
+                { this.buildNavBorder(this.props.numSlides) }
             </div>
         );
     }
@@ -57,6 +55,30 @@ class Content extends React.Component<Props> {
                         subTitle=""
                     />
                 );
+        }
+    }
+    private buildNavBorder(numSlides: number) {
+        if (this.props.slide.id === 0) {
+            return (
+                <div className="navBorder">
+                    <button hidden={true} onClick={this.props.onPrevious}>Previous Slide</button>
+                    <button onClick={this.props.onNext}>Next Slide</button>
+                </div>
+            )
+        } else if (this.props.slide.id === numSlides - 1) {
+            return (
+                <div className="navBorder">
+                    <button onClick={this.props.onPrevious}>Previous Slide</button>
+                    <button hidden={true} onClick={this.props.onNext}>Next Slide</button>
+                </div>
+            )
+        } else {
+            return (
+                <div className="navBorder">
+                    <button onClick={this.props.onPrevious}>Previous Slide</button>
+                    <button onClick={this.props.onNext}>Next Slide</button>
+                </div>
+            )
         }
     }
 }

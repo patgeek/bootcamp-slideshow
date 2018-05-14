@@ -1,4 +1,6 @@
+import * as React from 'react';
 import {TitleSlide, SimpleSlide, TwoColSlide} from '../types/index';
+import Content from '../components/Content';
 
 const s0: TitleSlide = {
     id: 0,
@@ -31,8 +33,13 @@ const s3: TwoColSlide = {
 
 const ts = [s0, s1, s2, s3];
 
-export default ts;
+export const testTitleContent = 
+    <Content slide={s0} numSlides={2} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>;
 
-export {s0 as testTitleSlide};
-export {s1 as testSimpleSlide};
-export {s3 as testTwoColSlide};
+export const testSimpleContent = 
+    <Content slide={s1} numSlides={4} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>;
+
+export const testTwoColContent = 
+    <Content slide={s3} numSlides={4} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>;
+
+export default ts;
