@@ -15,10 +15,6 @@ const store = createStore(slide, {
   slides,
 });
 
-// ReactDOM.render(
-//   <App slides={ts}/>,
-//   document.getElementById('root') as HTMLElement
-// );
 ReactDOM.render(
   <Provider store={store}>
     <App />
