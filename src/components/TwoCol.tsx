@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../styles/TwoCol.css';
 
 
 interface Props {
@@ -12,8 +13,8 @@ class TwoCol extends React.Component<Props> {
         return (
             <div>
                 <h1 className="mainTitle">{this.props.mainTitle}</h1>
-                <pre className="leftcol">{this.props.leftcol}</pre>
-                <pre className="rightcol">{this.props.rightcol}</pre>
+                <p className="leftcol">{this.props.leftcol}</p>
+                <p className="rightcol">{this.props.rightcol}</p>
             </div>
         );
     }

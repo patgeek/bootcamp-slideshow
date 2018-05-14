@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Content from './Content'
 import SlideList from './SlideList';
-import {Slide} from '../types/index';
+import {GenericSlide} from '../types/index';
 import '../styles/App.css';
 
 
 export interface Props {
-  slides: Slide[];
+  slides: GenericSlide[];
   slideId: number;
   onChange: (id: number) => void;
   onNext: () => void;

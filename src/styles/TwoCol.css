@@ -1,0 +1,13 @@
+.mainTitle {
+    color: red;
+}
+
+.leftCol {
+    color: green;
+    text-align: left;
+}
+
+.rightCol {
+    color: blue;
+    text-align: right;
+}

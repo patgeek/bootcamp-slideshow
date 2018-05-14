@@ -1,25 +1,38 @@
-import {Slide} from '../types/index';
+import {TitleSlide, SimpleSlide, TwoColSlide} from '../types/index';
 
-let title: Slide;
-title = {
+const s0: TitleSlide = {
     id: 0,
     mainTitle: "Star Wars",
     subTitle: "Episode I",
-    body: "Not a good movie.",
     type: "TITLE",
 }
 
-let simple: Slide;
-simple = {
+const s1: SimpleSlide = {
     id: 1,
-    mainTitle: "Star Wars",
-    subTitle: "Episode I",
-    body: "Not a good movie.",
+    mainTitle: "Thoughts",
+    body: "The acting is not very good.\nI liked it as a kid.",
     type: "SIMPLE",
 }
 
-const ts = [title, simple];
+const s2: SimpleSlide = {
+    id: 2,
+    mainTitle: "More Thoughts",
+    body: "Where do I take this project next?\nI think I need to implement redux.\nTime to read docs.",
+    type: "SIMPLE",
+}
+
+const s3: TwoColSlide = {
+    id: 3,
+    mainTitle: "Two Columns",
+    type: "TWOCOL",
+    leftcol: "Here's the text in the left.",
+    rightcol: "And here's the text in the right.",
+}
+
+const ts = [s0, s1, s2, s3];
 
 export default ts;
-export {title as testTitleSlide};
-export {simple as testSimpleSlide};
+
+export {s0 as testTitleSlide};
+export {s1 as testSimpleSlide};
+export {s3 as testTwoColSlide};

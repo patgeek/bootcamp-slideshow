@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Title from './Title';
 import Simple from './Simple';
-// import TwoCol from './TwoCol';
-import {Slide} from '../types/index';
+import TwoCol from './TwoCol';
+import {GenericSlide} from '../types/index';
 import '../styles/Content.css';
 
 
 export interface Props {
-    slide: Slide;
+    slide: GenericSlide;
     onChange: (id: number) => void;
     onNext: () => void;
     onPrevious: () => void;
@@ -27,32 +27,32 @@ class Content extends React.Component<Props> {
             </div>
         )
     }
-    private buildSlide(slide: Slide) {
+    private buildSlide(slide: GenericSlide) {
         switch(slide.type) {
             case "TITLE":
                 return (
-                    <Title mainTitle={this.props.slide.mainTitle}
-                        subTitle={this.props.slide.subTitle}
+                    <Title mainTitle={slide.mainTitle}
+                        subTitle={slide.subTitle}
                     />
                 );
             case "SIMPLE":
                 return (
-                    <Simple mainTitle={this.props.slide.mainTitle}
-                        body={this.props.slide.body}
+                    <Simple mainTitle={slide.mainTitle}
+                        body={slide.body}
                     />
                 );
 
-            // case "TWOCOL":
-            //     return (
-            //         <TwoCol mainTitle={this.props.slide.mainTitle}
-            //             leftcol={this.props.slide.leftcol}
-            //             rightcol={this.props.slide.rightcol}
-            //         />
-            //     );
+            case "TWOCOL":
+                return (
+                    <TwoCol mainTitle={slide.mainTitle}
+                        leftcol={slide.leftcol}
+                        rightcol={slide.rightcol}
+                    />
+                );
             default:
                 return (
-                    <Title mainTitle={this.props.slide.mainTitle}
-                        subTitle={this.props.slide.subTitle}
+                    <Title mainTitle="No Slide Type"
+                        subTitle=""
                     />
                 );
         }
