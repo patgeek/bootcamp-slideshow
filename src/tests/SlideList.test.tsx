@@ -1,26 +1,23 @@
-import * as React from 'react';
-import SlideList from '../components/SlideList';
-import *  as renderer from 'react-test-renderer';
-import ts from './TestFixtures';
+import {testSlideList} from './TestFixtures';
+import { shallow } from 'enzyme';
+import { expect } from 'chai'
 
 
-test('It can be rendered.', () => {
-    const component = renderer.create(
-        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
-    );
-    expect(component.toJSON().children.length).toBeGreaterThan(0);
-});
+describe("SlideList renders", () => {
+    it('should render the slide list border', () => {
+        const wrapper = shallow(testSlideList);
+        console.log(wrapper.debug());
+        expect(wrapper.hasClass("slideListBorder")).to.equal(true);
+    });
 
-test('Button list is rendered.', () => {
-    const component = renderer.create(
-        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
-    );
-    expect(component.toJSON().children[1].type).toBe("ul");
-});
+    it('should render the slide list content', () => {
+        const wrapper = shallow(testSlideList);
+        expect(wrapper.find("ul").hasClass("slideListContent")).to.equal(true);
+    });
 
-test('Individual buttons are rendered.', () => {
-    const component = renderer.create(
-        <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
-    );
-    expect(component.toJSON().children[1].children.length).toBeGreaterThan(0)
+    it('should render the slide list buttons', () => {
+        const wrapper = shallow(testSlideList);
+        const numSlides = testSlideList.props.slides.length;
+        expect(wrapper.find("SlideButton")).to.have.length(numSlides);
+    });
 });

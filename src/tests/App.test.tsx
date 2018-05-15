@@ -15,6 +15,5 @@ test('It renders the content.', () => {
   const component = renderer.create(
     <App slides={ts} slideId={0} visited={[0]} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>
   );
-  console.log(component.toJSON().props);
   expect(component.toJSON().children[1].props.className).toEqual("contentBorder");
 });

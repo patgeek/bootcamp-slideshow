@@ -1,6 +1,10 @@
 import * as React from 'react';
 import {TitleSlide, SimpleSlide, TwoColSlide} from '../types/index';
 import Content from '../components/Content';
+import Simple from '../components/Simple';
+import Title from '../components/Title';
+import TwoCol from '../components/TwoCol';
+import SlideList from '../components/SlideList';
 
 const s0: TitleSlide = {
     id: 0,
@@ -41,5 +45,11 @@ export const testSimpleContent =
 
 export const testTwoColContent = 
     <Content slide={s3} numSlides={4} onChange={() => {}} onNext={() => {}} onPrevious={() => {}} onVisited={() => {}}/>;
+
+export const testSimpleSlide = <Simple mainTitle="Test Title" body="Test Body"/>;
+export const testTitleSlide = <Title mainTitle="Test Title" subTitle="Test Subtitle"/>;
+export const testTwoColSlide = <TwoCol mainTitle="Test Title" leftcol="Test left col" rightcol="Test right col"/>;
+
+export const testSlideList = <SlideList slides={ts} visited={[0]} onChange={() => {}}/>
 
 export default ts;

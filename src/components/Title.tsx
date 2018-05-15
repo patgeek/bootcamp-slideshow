@@ -4,7 +4,7 @@ import '../styles/Title.css';
 
 interface Props {
     mainTitle: string;
-    subTitle?: string;
+    subTitle: string;
 }
 
 class Title extends React.Component<Props> {
@@ -12,9 +12,7 @@ class Title extends React.Component<Props> {
         return (
             <div>
                 <h1 className="mainTitle">{this.props.mainTitle}</h1>
-                { this.props.subTitle != null &&
-                    <h2 className="subTitle">{this.props.subTitle}</h2>
-                }
+                <h2 className="subTitle">{this.props.subTitle}</h2>
             </div>
         );
     }
